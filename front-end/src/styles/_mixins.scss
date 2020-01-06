@@ -1,0 +1,118 @@
+@mixin button() {
+    @include form__button;
+}
+
+@mixin button-mini() {
+	background:$ux-white;
+	border-bottom:1px solid $ux-black;
+	border-right:1px solid $ux-black;
+	font-size:0.75rem;
+	font-weight:900;
+	margin:0 4px;
+	padding:2px;
+	width:80px;
+
+	&:hover {
+		background:$ux-blue;
+		border-top:1px solid $ux-blue;
+		border-left:1px solid $ux-blue;
+		cursor:pointer;
+	}
+}
+
+@mixin center() {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+@mixin form__button() {
+    background:$ux-secondary;
+    border: 2px solid $ux-secondary;
+    border-bottom:2px solid $ux-black;
+    border-right:2px solid $ux-black;
+    color: $ux-black;
+    font-size:1rem;
+    font-weight:900;
+    margin:4px;
+    padding:8px;
+    transition-duration: 1s;
+    width:150px;
+
+    &:hover {
+        background:$ux-secondary;
+        border: 2px solid $ux-secondary;
+        color:$background-color;
+        cursor:pointer;
+    }
+}
+
+@mixin form__input() {
+    background:$ux-white;
+    border:2px dotted $text-color;
+    border-top:0;
+    color:$ux-black;
+    font-size:1rem;
+    margin:4px;
+    width:150px;
+    padding:8px;
+
+    &:hover {
+        background:$ux-blue;
+    }
+}
+
+@mixin donation-button() {
+    @include center;
+	background: $ux-secondary;
+	border: 2px solid $ux-secondary;
+	border-bottom: 2px solid $ux-black;
+	border-right: 2px solid $ux-black;
+	color: $ux-black;
+	margin: 8px;
+	padding: 4px;
+
+	&:hover {
+		background: $ux-blue;
+		cursor: pointer;
+	}
+
+	i {
+		color: $ux-black;
+		margin: 4px;
+	}
+
+	p {
+		margin: 0 4px;
+	}
+}
+
+@mixin donation-new() {
+    @include center;
+	color:$ux-grey;
+
+	&:hover {
+		color:$ux-black;
+	}
+
+	i {
+		background: $ux-secondary;
+		border: 2px solid $ux-secondary;
+		border-bottom: 2px solid $ux-black;
+		border-right: 2px solid $ux-black;
+		color:$ux-black;
+		margin:4px;
+		padding:4px;
+
+		&:hover {
+			background: $ux-blue;
+			cursor: pointer;
+		}
+	}
+
+	p {
+		font-size:1rem;
+    	font-weight:900;
+		margin: 0 4px;
+	}
+}
